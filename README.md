@@ -6,6 +6,19 @@ Reference brief: [`.cursor/rules/projectrules.md`](.cursor/rules/projectrules.md
 
 **Developer docs:** [`docs/getting-started.md`](docs/getting-started.md) · [`docs/components.md`](docs/components.md) · [`docs/data-flow.md`](docs/data-flow.md)
 
+**Lighthouse reports:** [Desktop](https://drive.google.com/file/d/1XYyZMPZ3EJ260b-M-koD333DsnOao08I/view?usp=sharing) · [Mobile](https://drive.google.com/file/d/1uvQE60yFu6egoqzzjiJAgL4gfMF2LlO7/view?usp=sharing) · index in [`lighthouse-report/desktop.md`](lighthouse-report/desktop.md)
+
+---
+
+## Lighthouse reports
+
+| Device | Report |
+|--------|--------|
+| Desktop | [Google Drive](https://drive.google.com/file/d/1XYyZMPZ3EJ260b-M-koD333DsnOao08I/view?usp=sharing) |
+| Mobile | [Google Drive](https://drive.google.com/file/d/1uvQE60yFu6egoqzzjiJAgL4gfMF2LlO7/view?usp=sharing) |
+
+Source index: [`lighthouse-report/desktop.md`](lighthouse-report/desktop.md).
+
 ---
 
 ## Setup
@@ -274,7 +287,7 @@ Principle: meaningful motion that supports hierarchy, never animation-for-its-ow
 
 - Company marquee uses Lucide stand-ins, not official wordmarks.
 - Hero asset not heavily compressed.
-- No Lighthouse report checked in until a production deploy exists.
+- Lighthouse Desktop / Mobile reports are linked under [Lighthouse reports](#lighthouse-reports) and in [`lighthouse-report/desktop.md`](lighthouse-report/desktop.md).
 - Hash CTAs do not open real product flows (Privacy/Terms are stubs).
 - Ruby chatbot is UI-only (open/close + static welcome/options; no lead/chat logic).
 
@@ -284,7 +297,7 @@ Principle: meaningful motion that supports hierarchy, never animation-for-its-ow
 
 1. Compress / serve AVIF+WebP variants of the hero; measure LCP on mobile.
 2. Optional official SVG brand set (or Simple Icons) behind the same `marquee` data shape.
-3. Deploy to Vercel and attach Desktop + Mobile Lighthouse scores (assessment deliverable #4).
+3. Re-run Lighthouse after further image/font cuts and update the [Drive report links](lighthouse-report/desktop.md).
 4. Wire Ruby leads to a real API and richer retrieval for chat answers.
 5. Light scroll-reveal on below-fold sections with Intersection Observer + CSS only.
 6. Add Playwright smoke tests for nav open/close and reduced-motion marquee.
@@ -297,4 +310,4 @@ Principle: meaningful motion that supports hierarchy, never animation-for-its-ow
 npm run build
 ```
 
-Deploy the `.next` output with [Vercel](https://vercel.com) (or Netlify / Cloudflare Pages). After deploy, run Lighthouse (Desktop + Mobile) on the live URL and attach results for the assessment performance report.
+Deploy the `.next` output with [Vercel](https://vercel.com) (or Netlify / Cloudflare Pages). Current Desktop + Mobile Lighthouse audits: [`lighthouse-report/desktop.md`](lighthouse-report/desktop.md).
